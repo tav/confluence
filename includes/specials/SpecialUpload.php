@@ -288,6 +288,7 @@ class UploadForm {
 	 * @access private
 	 */
 	function processUpload(){
+		global $wgRequest, $wgUser; /* tav */
 		global $wgUser, $wgOut, $wgFileExtensions, $wgLang;
 	 	$details = null;
 	 	$value = null;
@@ -295,6 +296,14 @@ class UploadForm {
 
 	 	switch($value) {
 			case self::SUCCESS:
+				/* tav */
+				$fileName = ':' . $this->mLocalFile->getTitle();
+				$userName = $wgUser->getName();
+				$userTitle = Title::newFromText("User:" . $userName);
+				if ($fileName === (':File:Profile.' . $userName . '.jpg')) {
+					$wgOut->redirect($userTitle->getFullURL());
+					return;
+				}
 				$wgOut->redirect( $this->mLocalFile->getTitle()->getFullURL() );
 				break;
 

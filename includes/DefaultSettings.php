@@ -272,6 +272,9 @@ $wgUrlProtocols = array(
 	'http://',
 	'https://',
 	'ftp://',
+	// tav -- added skype...
+	'skype:',
+	'callto:',
 	'irc://',
 	'gopher://',
 	'telnet://', // Well if we're going to support the above.. -ævar

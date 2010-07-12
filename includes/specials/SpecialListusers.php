@@ -268,7 +268,10 @@ function wfSpecialListusers( $par = null ) {
 	# getBody() first to check, if empty
 	$usersbody = $up->getBody();
 	$s = XML::openElement( 'div', array('class' => 'mw-spcontent') );
-	$s .= $up->getPageHeader();
+	/* tav */
+	if ((!($wgRequest->GetVal('noheader'))) || $wgRequest->GetVal('offset') || $wgRequest->GetVal('limit')) {
+		$s .= $up->getPageHeader();
+	}
 	if( $usersbody ) {
 		$s .=	$up->getNavigationBar();
 		$s .=	'<ul>' . $usersbody . '</ul>';

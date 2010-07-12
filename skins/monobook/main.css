@@ -524,6 +524,7 @@ table.rimage {
 ** keep the whitespace in front of the ^=, hides rule from konqueror
 ** this is css3, the validator doesn't like it when validating as css2
 */
+/*
 #bodyContent a.external,
 #bodyContent a[href ^="gopher://"] {
 	background: url(external.png) center right no-repeat;
@@ -533,6 +534,8 @@ table.rimage {
 .rtl #bodyContent a[href ^="gopher://"] {
 	background-image: url(external-rtl.png);
 }
+*/
+
 #bodyContent a[href ^="https://"],
 .link-https {
 	background: url(lock_icon.gif) center right no-repeat;
@@ -607,9 +610,11 @@ table.rimage {
 	background: none;
 	padding: 0;
 }
+/*
 #bodyContent a.external {
 	color: #36b;
 }
+*/
 /* this can be used in the content area to switch off
 special external link styling */
 #bodyContent .plainlinks a {
@@ -1557,4 +1562,83 @@ div#mw-search-interwiki-caption {
 /* God-damned hack for the crappy layout */
 .os-suggest {
 	font-size: 127%;
+}
+
+/* tav */
+
+.headingsub {
+	color: #000;
+}
+
+.heading div {
+	display: inline;
+}
+
+.heading div a, .heading div a:visited, .heading div a:link, .headingsub a, .headingsub a:visited, .headingsub a:link {
+	text-decoration: none;
+	color: #000;
+}
+
+.heading div a:hover, .heading div a:active, .headingsub a:hover, .headingsub a:active {
+	text-decoration: underline;
+	color: #000;
+}
+
+.headingsub a.external {
+	text-decoration: none;
+	color: #002bb8;
+	background: none;
+}
+
+.headingsub a.external:visited {
+	color: #5a3696;
+}
+
+.headingsub a.external:active {
+	color: #faa700;
+}
+
+.headingsub a.external:hover {
+	text-decoration: underline;
+}
+
+#follow-action, #unfollow-action {
+	text-align: right;
+	margin-right: 25px;
+}
+
+#follow-action {
+	padding: 5px 0 0 8px;
+	text-align: left;
+}
+
+.pinch-inwards, #activity-stream {
+	margin: 0 20px 0 5px;
+}
+
+.profile-column {
+	padding: 0px 5px 5px 5px;
+	vertical-align: top;
+}
+
+#incomplete-profile {
+	text-align: center;
+	font-size: 1.6em;
+	padding: 12px;
+	border: 1px dashed #c0c0c0;
+	margin: 0 auto;
+	width: 50%;
+}
+
+.absmiddle {
+	vertical-align: top !important;
+	padding-bottom: 20px !important;
+}
+
+blockquote.block-warn {
+	margin: 10px 10px 0 17px;
+}
+
+.block-warn a, .block-warn a:visited {
+	color: #ba0000;
 }
